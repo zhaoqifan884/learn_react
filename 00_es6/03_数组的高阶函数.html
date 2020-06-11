@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  const name = ["aaa", "bbb", "ccc", "ddd"];
+  /**
+   * 回调函数有三个参数
+   * 1. 执行时的对应元素
+   * 2. 对应的下标值
+   * 3. 完整的数组对象
+   */
+  const newName = name.map((item) => {
+    return item + "000"
+  });
+
+  console.log(newName)
+</script>
+</body>
+</html>
