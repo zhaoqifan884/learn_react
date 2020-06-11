@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 class="title"></h2>
+<button class="btn">改变文本</button>
+
+<script>
+    //1、定义源数据
+    let message = "hello world"
+    //2、将数据显示在h2元素中
+    const titleE1 = document.getElementsByClassName("title")[0]
+    titleE1.innerHTML = message
+    //3、点击按钮，界面信息发生变化
+    const btnE1 = document.getElementsByClassName("btn")[0]
+    btnE1.addEventListener("click", e => {
+        // console.log("按钮发生了点击")
+        message = "hello react"
+        titleE1.innerHTML = message;
+    })
+</script>
+</body>
+</html>
