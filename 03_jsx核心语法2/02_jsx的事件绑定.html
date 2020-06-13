@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app"></div>
+<!-- 1.引入依赖 -->
+<script src="../react/react.development.js"></script>
+<script src="../react/react-dom.development.js"></script>
+<script src="../react/babel.min.js"></script>
+
+<script type="text/babel">
+  class App extends React.Component {
+    constructor() {
+      super();
+      this.state = {
+        message: "你好啊",
+        counter: 100
+      }
+    }
+
+    render() {
+      return(
+        <div>
+          {/*react 内部回调函数call赋值为undefind   相当于给this赋值为undefind*/}
+          {/*方案一：  bind绑定this(显示绑定)   this总是向上找*/}
+          <button onClick={this.btnClick.bind(this)}>按钮</button>
+          {/*方法二：箭头函数*/}
+          <button onClick={this.increment}>+1</button>
+          {/*方法三（推荐）：直接传入一个箭头函数，在箭头函数中调用需要执行的函数*/}
+          {/*带()的是函数，不带括号的是方法*/}
+          <button onClick={() => {this.decrement()}}>-1</button>
+        </div>
+      )
+    }
+
+    btnClick() {
+      console.log(this)
+    }
+
+    //箭头函数永远不绑定this
+    increment = () => {
+      console.log(this.state.counter)
+    }
+
+    decrement() {
+      console.log(this.state.counter)
+    }
+  }
+
+  ReactDOM.render(<App/>, document.getElementById("app"))
+</script>
+</body>
+</html>
