@@ -7,17 +7,32 @@
 <body>
 <script>
   const name = ["aaa", "bbb", "ccc", "ddd"];
+  const nums = [110, 123, 50, 32, 55, 10, 8, 333];
   /**
+   * map函数（1，2，3）
    * 回调函数有三个参数
    * 1. 执行时的对应元素
    * 2. 对应的下标值
    * 3. 完整的数组对象
    */
-  const newName = name.map((item) => {
+
+  const newName = name.map((item, index, arr) => {
     return item + "000"
   });
 
-  console.log(newName)
+  // nums.filter(回调函数，绑定this)    filter 过滤器
+ const newNums = nums.filter((item, index, arr) => {
+   //需求：找到大于50的数
+   return item >= 50;
+  });
+
+ //需求： 找到偶数
+  const newNums1 = nums.filter(item => {
+    return item % 2 === 0;
+  });
+  console.log(newName);
+  console.log(newNums);
+  console.log(newNums1);
 </script>
 </body>
 </html>
