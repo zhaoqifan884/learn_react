@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app"></div>
+<!-- 1.引入依赖 -->
+<script src="../react/react.development.js"></script>
+<script src="../react/react-dom.development.js"></script>
+<script src="../react/babel.min.js"></script>
+
+<script type="text/babel">
+  class App extends React.Component {
+    constructor() {
+      super();
+      this.state = {
+        movies: ["大话西游", "海王", "流浪地球", "盗梦空间"]
+      };
+      this.btnClick = this.btnClick.bind(this)
+    }
+
+    render() {
+      return(
+        <div>
+          <button onClick={this.btnClick}>按钮</button>
+          <ul>
+            {/*map(回调函数，绑定this对象)*/}
+            {
+              this.state.movies.map((item, index, arr) =>{
+                return <li onClick={(event) => {this.liClick(item, index, event)}}>{item}</li>
+              })
+            }
+          </ul>
+        </div>
+      )
+    }
+    btnClick(event) {
+      console.log("按钮发生了点击", event)
+    }
+    liClick(item, index, event) {
+      console.log("li发生了点击", item, index, event)
+    }
+  }
+  ReactDOM.render(<App/>, document.getElementById("app"))
+</script>
+</body>
+</html>
