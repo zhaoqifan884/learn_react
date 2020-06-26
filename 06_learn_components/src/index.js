@@ -15,8 +15,8 @@ import ReactDOM from "react-dom"
 // import "./05_react实现slot/style.css"
 
 // import App from "./06_跨组件之间的通信/01_跨组件之间的通信_props"
-// import App from "./06_跨组件之间的通信/02_跨组件之间的通信_context_类组件";
+import App from "./06_跨组件之间的通信/02_跨组件之间的通信_context_类组件";
 // import App from "./06_跨组件之间的通信/03_跨组件之间的通信_context_函数组件";
-import App from "./06_跨组件之间的通信/04_跨组件之间的通信_多个context";
+// import App from "./06_跨组件之间的通信/04_跨组件之间的通信_多个context";
 
 ReactDOM.render(<App/>, document.getElementById("root"));

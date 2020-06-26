@@ -6,20 +6,26 @@ const UserContext = React.createContext({
   level: -1
 });
 
+const ThemeContext = React.createContext({
+  color:  "black"
+});
+
 //如果想用context，必须要用类组件
 class ProfileHead extends Component{
   render() {
     console.log(this.context);
     return(
       <div>
-        <h2>{this.context.nikeName}</h2>
+        <h2 style={{color: "red"}}>{this.context.nikeName}</h2>
         <h2>{this.context.level}</h2>
+        <h2>{this.context.color}</h2>
       </div>
     )
   }
 }
 
 ProfileHead.contextType = UserContext;
+ProfileHead.contextType = ThemeContext;
 
 function Profile() {
   return(
