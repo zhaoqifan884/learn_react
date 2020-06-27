@@ -15,8 +15,13 @@ import ReactDOM from "react-dom"
 // import "./05_react实现slot/style.css"
 
 // import App from "./06_跨组件之间的通信/01_跨组件之间的通信_props"
-import App from "./06_跨组件之间的通信/02_跨组件之间的通信_context_类组件";
+// import App from "./06_跨组件之间的通信/02_跨组件之间的通信_context_类组件";
 // import App from "./06_跨组件之间的通信/03_跨组件之间的通信_context_函数组件";
 // import App from "./06_跨组件之间的通信/04_跨组件之间的通信_多个context";
+// import App from "./07_setState的使用/01_为什么使用setState";
+// import App from "./07_setState的使用/02_setState是异步更新的";
+// import App from "./07_setState的使用/03_setState是同步更新";
+// import App from "./07_setState的使用/04_setState的数据合并";
+import App from "./07_setState的使用/05_setState本身的合并";
 
 ReactDOM.render(<App/>, document.getElementById("root"));
