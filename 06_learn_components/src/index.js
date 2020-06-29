@@ -22,6 +22,8 @@ import ReactDOM from "react-dom"
 // import App from "./07_setState的使用/02_setState是异步更新的";
 // import App from "./07_setState的使用/03_setState是同步更新";
 // import App from "./07_setState的使用/04_setState的数据合并";
-import App from "./07_setState的使用/05_setState本身的合并";
+// import App from "./07_setState的使用/05_setState本身的合并";
+// import App from "./08_react的性能优化/01_keys的作用";
+import App from "./08_react的性能优化/02_组件嵌套的render调用";
 
 ReactDOM.render(<App/>, document.getElementById("root"));
