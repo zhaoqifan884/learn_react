@@ -24,6 +24,9 @@ import ReactDOM from "react-dom"
 // import App from "./07_setState的使用/04_setState的数据合并";
 // import App from "./07_setState的使用/05_setState本身的合并";
 // import App from "./08_react的性能优化/01_keys的作用";
-import App from "./08_react的性能优化/02_组件嵌套的render调用";
+// import App from "./08_react的性能优化/02_组件嵌套的render调用";
+// import App from "./08_react的性能优化/03_shouldComponentUpdate";
+// import App from "./08_react的性能优化/04_PureComponent";
+import App from "./08_react的性能优化/05_memo的使用";
 
 ReactDOM.render(<App/>, document.getElementById("root"));
