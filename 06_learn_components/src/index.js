@@ -27,6 +27,8 @@ import ReactDOM from "react-dom"
 // import App from "./08_react的性能优化/02_组件嵌套的render调用";
 // import App from "./08_react的性能优化/03_shouldComponentUpdate";
 // import App from "./08_react的性能优化/04_PureComponent";
-import App from "./08_react的性能优化/05_memo的使用";
+// import App from "./08_react的性能优化/05_memo的使用";
+// import App from "./09_前面知识点的补充/01_setState不可变的力量";
+import App from "./09_前面知识点的补充/02_全局事件传递";
 
 ReactDOM.render(<App/>, document.getElementById("root"));
