@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import {EventEmitter} from 'events'
 //事件总线 ：event bus
-const eventBus = new EventEmitter()
+const eventBus = new EventEmitter();
 
 class Home extends PureComponent{
 

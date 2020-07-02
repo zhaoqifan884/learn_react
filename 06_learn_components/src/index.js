@@ -6,7 +6,7 @@ import ReactDOM from "react-dom"
 // import App from "./03_组件间的通信/02_父传子_类组件.jsx";
 // import App from "./03_组件间的通信/03_父传子_函数组件.jsx";
 // import App from "./03_组件间的通信/04_父传子_属性验证.jsx";
-// import App from "./03_组件间的通信/05_子传父通信_函数传递.jsx";
+import App from "./03_组件间的通信/05_子传父通信_函数传递.jsx";
 
 // import App from "./04_组件通信案例/App";
 // import "./04_组件通信案例/style.css"
@@ -29,6 +29,6 @@ import ReactDOM from "react-dom"
 // import App from "./08_react的性能优化/04_PureComponent";
 // import App from "./08_react的性能优化/05_memo的使用";
 // import App from "./09_前面知识点的补充/01_setState不可变的力量";
-import App from "./09_前面知识点的补充/02_全局事件传递";
+// import App from "./09_前面知识点的补充/02_全局事件传递";
 
 ReactDOM.render(<App/>, document.getElementById("root"));
