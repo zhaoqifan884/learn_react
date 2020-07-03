@@ -35,6 +35,10 @@ import ReactDOM from "react-dom"
 // import App from "./10_受控和非受控组件/03_受控组件-select的使用";
 // import App from "./10_受控和非受控组件/04_受控组件-多输入";
 // import App from "./10_受控和非受控组件/05_非受控组件的使用";
-import App from "./11_高阶组件的使用/01_高阶组件的定义方式";
+// import App from "./11_高阶组件的使用/01_高阶组件的定义方式";
+// import App from "./11_高阶组件的使用/02_高阶组件的应用_增强props";
+// import App from "./11_高阶组件的使用/03_高阶组件的应用_增强props_默认";
+import App from "./11_高阶组件的使用/04_高阶组件的应用_增强props_改进";
 
 ReactDOM.render(<App/>, document.getElementById("root"));
+// ReactDOM.render(<App name={'why'}/>, document.getElementById("root"));//11-01
