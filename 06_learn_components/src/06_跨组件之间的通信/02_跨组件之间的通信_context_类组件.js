@@ -5,10 +5,10 @@ const UserContext = React.createContext({
   nikeName: "aaa",
   level: -1
 });
-
-const ThemeContext = React.createContext({
+//context对象会覆盖
+/*const ThemeContext = React.createContext({
   color:  "black"
-});
+});*/
 
 //如果想用context，必须要用类组件
 class ProfileHead extends Component{
@@ -18,14 +18,14 @@ class ProfileHead extends Component{
       <div>
         <h2 style={{color: "red"}}>{this.context.nikeName}</h2>
         <h2>{this.context.level}</h2>
-        <h2>{this.context.color}</h2>
+        {/*<h2>{this.context.color}</h2>*/}
       </div>
     )
   }
 }
 
 ProfileHead.contextType = UserContext;
-ProfileHead.contextType = ThemeContext;
+// ProfileHead.contextType = ThemeContext;
 
 function Profile() {
   return(

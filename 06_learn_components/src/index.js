@@ -16,7 +16,7 @@ import ReactDOM from "react-dom"
 
 // import App from "./06_跨组件之间的通信/01_跨组件之间的通信_props"
 // import App from "./06_跨组件之间的通信/02_跨组件之间的通信_context_类组件";
-// import App from "./06_跨组件之间的通信/03_跨组件之间的通信_context_函数组件";
+import App from "./06_跨组件之间的通信/03_跨组件之间的通信_context_函数组件";
 // import App from "./06_跨组件之间的通信/04_跨组件之间的通信_多个context";
 // import App from "./07_setState的使用/01_为什么使用setState";
 // import App from "./07_setState的使用/02_setState是异步更新的";
@@ -35,6 +35,6 @@ import ReactDOM from "react-dom"
 // import App from "./10_受控和非受控组件/03_受控组件-select的使用";
 // import App from "./10_受控和非受控组件/04_受控组件-多输入";
 // import App from "./10_受控和非受控组件/05_非受控组件的使用";
-import App from "./11_高阶组件的使用/01_高阶组件的定义方式";
+// import App from "./11_高阶组件的使用/01_高阶组件的定义方式";
 
 ReactDOM.render(<App/>, document.getElementById("root"));
