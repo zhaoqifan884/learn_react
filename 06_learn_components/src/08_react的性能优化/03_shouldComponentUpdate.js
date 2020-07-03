@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+//类组件优化
 class App extends Component {
   constructor(props) {
     super(props);

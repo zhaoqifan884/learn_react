@@ -1,5 +1,5 @@
 import React, {PureComponent} from "react";
-
+//类组件优化
 //封装三个组件
 //Head
 function Head() {

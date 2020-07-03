@@ -1,5 +1,5 @@
 import React, {PureComponent, memo} from "react";
-
+//函数组件优化
 //封装三个组件
 //Head
 const MemoHead = memo(function Head() {
