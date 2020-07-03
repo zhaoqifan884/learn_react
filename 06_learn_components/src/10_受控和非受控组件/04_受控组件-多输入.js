@@ -38,7 +38,7 @@ class App extends PureComponent {
                                name={'password'}/>
                     </label>
                     <br/>
-                    <label htmlFor="username">
+                    <label htmlFor="valid">
                         验证：
                         {/*单向数据流： 输入框的数据先保存到state中，然后再由value指向输入框，并显示*/}
                         {/*受控组件*/}
