@@ -10,6 +10,7 @@ class App extends PureComponent {
     }
 }
 
+//高阶组件是函数
 //高阶组件     参数为组件，返回值为新组件的函数
 // 接收一个组件作为参数，并返回另外一个组件
 function enhanceComponent(WrappedComponent) {
