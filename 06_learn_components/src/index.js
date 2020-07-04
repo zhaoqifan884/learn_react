@@ -43,8 +43,9 @@ import ReactDOM from "react-dom"
 // import App from "./11_高阶组件的使用/06_高阶组件应用-生命周期劫持-默认";
 // import App from "./11_高阶组件的使用/07_高阶组件应用-生命周期劫持-增强";
 // import App from "./12_组件内容的扩充/01_ref的转发";
-import App from "./12_组件内容的扩充/02_portals的使用";
-import "./css/index.css"
+// import App from "./12_组件内容的扩充/02_portals的使用";
+// import "./css/index.css"
+import App from "./12_组件内容的扩充/03_fragments的使用";
 
 ReactDOM.render(<App/>, document.getElementById("root"));
 // ReactDOM.render(<App name={'why'}/>, document.getElementById("root"));//11-01
