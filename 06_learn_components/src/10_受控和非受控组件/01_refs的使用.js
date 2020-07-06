@@ -67,7 +67,7 @@ class App extends PureComponent {
         //方式1：字符串 不推荐
         this.refs.titleRef.innerHTML = "Hello Bill";
     //    方式2
-    //     console.log(this.titleRef.current)
+        console.log(this.titleRef.current)
         this.titleRef.current.innerHTML = "Hello Claire";
         //方式3
         // console.log(this.titleEl)
