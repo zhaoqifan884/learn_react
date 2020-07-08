@@ -15,8 +15,9 @@ class App extends PureComponent {
   }
   render() {
     return (
-      //如果不想被div包裹渲染，则可以使用Fragment高阶组件
-      <Fragment>
+      //如果不想被div包裹渲染，则可以使用Fragment高阶组件  还可以使用短语法
+      <>
+      {/*<Fragment>*/}
         <h2>当前计数：{this.state.counter}</h2>
         <button onClick={event => this.increment()}>+1</button>
         <div>
@@ -31,7 +32,8 @@ class App extends PureComponent {
             })
           }
         </div>
-      </Fragment>
+      {/*</Fragment>*/}
+      </>
     );
   }
   increment() {
