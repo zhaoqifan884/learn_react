@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import {Comment,Avatar, Tooltip} from "antd";
+import {Comment, Avatar, Tooltip} from "antd";
 import {DeleteOutlined} from "@ant-design/icons";
 
 class CommentItem extends PureComponent {
