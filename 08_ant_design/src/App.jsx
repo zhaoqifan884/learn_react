@@ -1,7 +1,9 @@
 import React, {PureComponent} from 'react';
+import moment from "moment";
 
-import {Button} from "antd";
+import {Button, DatePicker} from "antd";
 import {PoweroffOutlined} from "@ant-design/icons";
+import HYHomeRecommend from "components/home/childCpns/home-recommend";
 
 class App extends PureComponent {
   constructor(props) {
@@ -16,6 +18,7 @@ class App extends PureComponent {
     return (
       //fragments短语法 <> </>
       <>
+          <HYHomeRecommend/>
         <Button type="primary" loading>
           Loading
         </Button>
@@ -41,9 +44,10 @@ class App extends PureComponent {
           loading={loadings[2]}
           // onClick={() => this.enterLoading(2)}
         />
+        <DatePicker defaultValue={moment('2020-07-16', 'YYYY-MM-DD')}/>
         {/*<DatePicker defaultValue={moment('2015-06-06', "YYYY-MM-DD")}
-                    allowClear={false}/>*/}
-      </>
+                    // allowClear={false}/>*/}
+  </>
     );
   }
 }
