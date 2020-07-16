@@ -5,7 +5,8 @@ import 'antd/dist/antd.less'
 
 // import App from './classNames/App';
 // import App from "./App";
-import App from "comment/App";
+// import App from "comment/App";
+import App from "./menu/App";
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
