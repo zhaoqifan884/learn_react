@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /**
+     * 什么是纯函数：
+     *            1.确定的输入，一定产生确定的输出
+     *            2.函数在执行过程中，不能产生副作用
+     * @param num1
+     * @param num2
+     * @returns {*}
+     */
+    //判断是否为一个纯函数   是纯函数
+    function sum(num1, num2) {
+        return num1 + num2
+    }
+    sum(20, 30);
+
+
+    //add不是纯函数
+    let foo = 10;
+    function add(num) {
+        return foo + num;
+    }
+    add(5); //15
+    foo = 20;
+    add(5); //25
+
+
+    //纯函数
+    const bar = 10;
+    function add2(num) {
+        return bar + num
+    }
+</script>
+</body>
+</html>
