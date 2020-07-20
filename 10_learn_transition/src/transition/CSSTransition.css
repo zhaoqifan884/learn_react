@@ -1,5 +1,6 @@
 .card-enter, .card-appear {
     /*opacity: 透明度： 0：完全透明   10：完全不透明*/
+    /*scale： s缩放*/
     opacity: 0;
     transform: scale(.6);
 }
