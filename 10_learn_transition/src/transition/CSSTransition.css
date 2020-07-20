@@ -1,0 +1,31 @@
+.card-enter, .card-appear {
+    /*opacity: 透明度： 0：完全透明   10：完全不透明*/
+    opacity: 0;
+    transform: scale(.6);
+}
+
+.card-enter-active, .card-appear-active {
+    opacity: 1;
+    transform: scale(1);
+    /*transition： 渐变透明300毫秒*/
+    transition: opacity 300ms, transform 300ms;
+}
+
+.card-enter-done, .card-appear-done {
+
+}
+
+.card-exit {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.card-exit-active {
+    opacity: 0;
+    transform: scale(.6);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.card-exit-done {
+    opacity: 0;
+}
