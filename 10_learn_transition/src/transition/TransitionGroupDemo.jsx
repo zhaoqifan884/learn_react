@@ -17,11 +17,12 @@ class TransitionGroupDemo extends PureComponent {
                 {
                     this.state.names.map((item, index) => {
                         return (
-                            <CSSTransition key={index}
+                            <CSSTransition key={item}
                                            timeout={500}
                                            classNames={'item'}>
                                 <div>
                                     {item}
+                                    <button onClick={event => this.removeItem(index)}>-</button>
                                 </div>
                             </CSSTransition>
                         )
@@ -30,6 +31,12 @@ class TransitionGroupDemo extends PureComponent {
                 <button onClick={event => this.addName()}>+name</button>
             </TransitionGroup>
         );
+    }
+
+    removeItem(index) {
+        this.setState({
+            names: this.state.names.filter((item, indey) => index !== indey)
+        })
     }
 
     addName() {
