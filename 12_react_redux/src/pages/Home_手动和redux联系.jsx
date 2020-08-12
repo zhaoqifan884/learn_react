@@ -3,7 +3,7 @@ import React, {PureComponent} from 'react';
 import store from "../store";
 import {addAction} from "../store/actionCreators";
 
-class Home extends PureComponent {
+class Home_Redux extends PureComponent {
   constructor(props) {
     super(props);
 
@@ -46,4 +46,4 @@ class Home extends PureComponent {
   }
 }
 
-export default Home;
+export default Home_Redux;

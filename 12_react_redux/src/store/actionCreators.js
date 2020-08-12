@@ -3,6 +3,7 @@ import {
   SUB_NUMBER,
   INCREMENT,
   DECREMENT,
+  FETCH_HOME_MULTIDATA,
   CHANGE_BANNER,
   CHANGE_RECOMMEND
 } from './constants.js';
@@ -67,3 +68,8 @@ export  const getHomeMultidataAction = dispatch => {
     dispatch(changeRecommendAction(data.recommend.list))
   })
 };
+
+//redux-saga拦截的action
+export const fetchHomeMultidataAction = {
+  type: FETCH_HOME_MULTIDATA
+}
