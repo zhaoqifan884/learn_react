@@ -18,6 +18,7 @@ const storeEnhancer = applyMiddleware(thunk, sagaMiddleware);
 
 const store = createStore(reducer, composeEnhancers(storeEnhancer));
 //跑起来之后才能对应用进行拦截
+//.run(生成器函数)
 sagaMiddleware.run(saga);
 
 export default store;
