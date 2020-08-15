@@ -13,6 +13,20 @@ const defaultState = {
   recommends: []
 };
 
+/**
+ *
+ * @param state : 前一次计算返回的值
+ * @param action ： 本次修改的值
+ * @returns {{counter: *}|{counter: number}}
+ *
+ * 为啥叫reducer：
+ *      因为类似于数组的reducer函数
+ *      (preValue, item) => {}  => reducer   回调函数
+ *      0 ： 默认值
+ *      eg: ["abc", "aaa"].reduce((preValue, item) => {
+ *
+ *      }, 0)
+ */
 function reducer(state = defaultState, action) {
   switch (action.type) {
     case ADD_NUMBER:
