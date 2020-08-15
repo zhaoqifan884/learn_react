@@ -1,45 +1,48 @@
-import React, {PureComponent} from 'react';
-// import {connect} from "../utils/connect";
-import {connect} from 'react-redux'
-// import axios from 'axios'
+import React, { PureComponent } from 'react';
 
-import {incAction, addAction, fetchHomeMultidataAction} from "../store/actionCreators";
+// import {connect} from '../utils/connect';
+import { connect } from 'react-redux';
+
+
+import {
+  incAction,
+  addAction
+} from '../store/counter/actionCreators';
+import {
+  fetchHomeMultidataAction
+} from '../store/home/actionCreators';
 
 class Home extends PureComponent {
-
   componentDidMount() {
-   this.props.getHomeMultidata();
+    this.props.getHomeMultidata();
   }
 
   render() {
     return (
       <div>
         <h1>Home</h1>
-        <h2>当前计数： {this.props.counter}</h2>
-        <button onClick={event => this.props.increment()}>+1</button>
-        <button onClick={event => this.props.addNum(5)}>+5</button>
+        <h2>当前计数: {this.props.counter}</h2>
+        <button onClick={e => this.props.increment()}>+1</button>
+        <button onClick={e => this.props.addNumber(5)}>+5</button>
       </div>
-    );
+    )
   }
-
 }
 
 const mapStateToProps = state => ({
-  counter: state.counter
-});
+  counter: state.counterInfo.counter
+})
 
 const mapDispatchToProps = dispatch => ({
   increment() {
-    dispatch(incAction())
+    dispatch(incAction());
   },
-  addNum(num) {
-    dispatch(addAction(num))
+  addNumber(num) {
+    dispatch(addAction(num));
   },
   getHomeMultidata() {
-    //在没有调用中间件之前，dispatch(对象)，调用之后为：dispatch(函数)
-    dispatch(fetchHomeMultidataAction)
+    dispatch(fetchHomeMultidataAction);
   }
-});
+})
 
-
-export default connect(mapStateToProps, mapDispatchToProps)(Home)
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
