@@ -9,6 +9,12 @@ const defaultState = {
   counter: 0
 }
 
+/**
+ *
+ * @param state : 前一次返回的值
+ * @param action ： 默认值
+ * @returns {{counter: *}|{counter: number}}
+ */
 function reducer(state = defaultState, action) {
   switch (action.type) {
     case ADD_NUMBER:
