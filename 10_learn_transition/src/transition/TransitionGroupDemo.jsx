@@ -13,23 +13,27 @@ class TransitionGroupDemo extends PureComponent {
     }
     render() {
         return (
-            <TransitionGroup>
-                {
-                    this.state.names.map((item, index) => {
-                        return (
-                            <CSSTransition key={item}
-                                           timeout={500}
-                                           classNames={'item'}>
-                                <div>
-                                    {item}
-                                    <button onClick={event => this.removeItem(index)}>-</button>
-                                </div>
-                            </CSSTransition>
-                        )
-                    })
-                }
+            <div>
+                <TransitionGroup>
+                    {
+                        this.state.names.map((item, index) => {
+                            return (
+                              //在TransitionGroup中的元素都必须在CSSTransition中
+                              <CSSTransition key={item}
+                                             timeout={500}
+                                             classNames={'item'}>
+                                  <div>
+                                      {item}
+                                      <button onClick={event => this.removeItem(index)}>-</button>
+                                  </div>
+                              </CSSTransition>
+                            )
+                        })
+                    }
+
+                </TransitionGroup>
                 <button onClick={event => this.addName()}>+name</button>
-            </TransitionGroup>
+            </div>
         );
     }
 
