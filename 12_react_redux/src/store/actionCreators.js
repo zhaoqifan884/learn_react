@@ -72,4 +72,4 @@ export  const getHomeMultidataAction = dispatch => {
 //redux-saga拦截的action
 export const fetchHomeMultidataAction = {
   type: FETCH_HOME_MULTIDATA
-}
+};

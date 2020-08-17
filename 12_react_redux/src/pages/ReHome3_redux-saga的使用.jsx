@@ -1,7 +1,6 @@
 import React, {PureComponent} from 'react';
-// import {connect} from "../utils/connect";
 import {connect} from 'react-redux'
-// import axios from 'axios'
+
 
 import {incAction, addAction, fetchHomeMultidataAction} from "../store/actionCreators";
 
@@ -38,7 +37,7 @@ const mapDispatchToProps = dispatch => ({
   getHomeMultidata() {
     //在没有调用中间件之前，dispatch(对象)，调用之后为：dispatch(函数)
     dispatch(fetchHomeMultidataAction)
-  }
+}
 });
 
 
