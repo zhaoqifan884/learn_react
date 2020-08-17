@@ -1,0 +1,11 @@
+a.active, a.link-active {
+  color: red;
+  font-size: 30px;
+}
+
+/*a.link-active {*/
+/*  color: blue;*/
+/*  !*删除线*!*/
+/*  !*text-decoration: line-through;*!*/
+/*  font-size: 30px;*/
+/*}*/
