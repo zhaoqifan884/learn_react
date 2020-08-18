@@ -8,7 +8,7 @@ import {
 // 拆分counterReducer
 const initialCounterState = {
   counter: 0
-}
+};
 function counterReducer(state = initialCounterState, action) {
   switch (action.type) {
     case ADD_NUMBER:

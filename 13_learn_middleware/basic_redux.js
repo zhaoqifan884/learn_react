@@ -7,7 +7,7 @@ const redux = require('redux');
 
 const initialState = {
   counter: 0
-}
+};
 
 // reducer
 function reducer(state = initialState, action) {

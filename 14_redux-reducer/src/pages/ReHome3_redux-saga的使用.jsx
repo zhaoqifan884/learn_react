@@ -31,7 +31,7 @@ class Home extends PureComponent {
 
 const mapStateToProps = state => ({
   counter: state.counterInfo.counter
-})
+});
 
 const mapDispatchToProps = dispatch => ({
   increment() {
@@ -43,6 +43,6 @@ const mapDispatchToProps = dispatch => ({
   getHomeMultidata() {
     dispatch(fetchHomeMultidataAction);
   }
-})
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

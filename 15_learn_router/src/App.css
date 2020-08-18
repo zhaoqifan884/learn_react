@@ -3,6 +3,11 @@ a.active, a.link-active {
   font-size: 30px;
 }
 
+a.about-active {
+  color: brown;
+  font-size: 20px;
+}
+
 /*a.link-active {*/
 /*  color: blue;*/
 /*  !*删除线*!*/

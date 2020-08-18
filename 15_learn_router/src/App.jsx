@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import {BrowserRouter, NavLink, Route, Switch} from "react-router-dom";
+import {NavLink, Route, Switch, withRouter} from "react-router-dom";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Profile from "./pages/profile";
@@ -8,6 +8,7 @@ import './App.css'
 import User from "./pages/user";
 import NoMatch from "./pages/noMatch";
 import Login from "./pages/login";
+import Product from "./pages/product";
 
 // import className from 'classnames'
 
@@ -27,7 +28,7 @@ class App extends PureComponent {
   render() {
     return (
       <div>
-        <BrowserRouter>
+
           {/*Link 方式*/}
           {/*<Link to={'/'}>首页</Link>*/}
           {/*<Link to={'/about'}>关于</Link>*/}
@@ -51,22 +52,30 @@ class App extends PureComponent {
           <NavLink to={'/about'} activeClassName={'link-active'}>关于</NavLink>
           <NavLink to={'/profile'} activeClassName={'link-active'}>我的</NavLink>
           <NavLink to={'/user'} activeClassName={'link-active'}>用户</NavLink>
+          <button onClick={event => this.jumpToProduct()}>商品</button>
 
           {/*//exact: 精准的匹配*/}
           {/*switch 组件 排他的作用，每个组件只能匹配一次*/}
           <Switch>
             <Route exact path={'/'} component={Home}/>
-            <Route exact path={'/about'} component={About}/>
+            <Route path={'/about'} component={About}/>
             <Route exact path={'/profile'} component={Profile}/>
             {/*<Route path={'/:id'} component={User}/>*/}
             <Route path={'/user'} component={User}/>
             <Route path={'/login'} component={Login}/>
+            <Route path={'/product'} component={Product}/>
             <Route component={NoMatch}/>
           </Switch>
-        </BrowserRouter>
+
       </div>
     );
   }
+
+  jumpToProduct() {
+    //这里报错的原因是因为app组件不是路由创建出来的
+    //怎么解决这个问题     通过使用高阶组件给APP增加属性   当使用withRouter高阶组件时，必须要将该包裹的组件放置在BrowserRouter中
+    this.props.history.push("/product");
+  }
 }
 
-export default App;
+export default withRouter(App);
