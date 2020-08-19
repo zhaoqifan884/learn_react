@@ -40,6 +40,7 @@ export default class About extends PureComponent {
     }
 
     jumpToJoin() {
+      //手动进行跳转
         // console.log(this.props.history);
         // console.log(this.props.location);
         // console.log(this.props.match);

@@ -9,6 +9,7 @@ import User from "./pages/user";
 import NoMatch from "./pages/noMatch";
 import Login from "./pages/login";
 import Product from "./pages/product";
+import Detail from "./pages/detail";
 
 // import className from 'classnames'
 
@@ -26,6 +27,7 @@ class App extends PureComponent {
     }
   }
   render() {
+    const id = 'abc';
     return (
       <div>
 
@@ -52,6 +54,7 @@ class App extends PureComponent {
           <NavLink to={'/about'} activeClassName={'link-active'}>关于</NavLink>
           <NavLink to={'/profile'} activeClassName={'link-active'}>我的</NavLink>
           <NavLink to={'/user'} activeClassName={'link-active'}>用户</NavLink>
+          <NavLink to={`/detail/${id}`} activeClassName={'link-active'}>详情</NavLink>
           <button onClick={event => this.jumpToProduct()}>商品</button>
 
           {/*//exact: 精准的匹配*/}
@@ -64,6 +67,7 @@ class App extends PureComponent {
             <Route path={'/user'} component={User}/>
             <Route path={'/login'} component={Login}/>
             <Route path={'/product'} component={Product}/>
+            <Route path={'/detail/:id'} component={Detail}/>
             <Route component={NoMatch}/>
           </Switch>
 
@@ -78,4 +82,9 @@ class App extends PureComponent {
   }
 }
 
+/**
+ * withRouter这个高阶组件实际上是在react-router中定义的，但是在react-router-dom中导出的，看源码即可知道
+ * 为什么withRouter中会有history等一些属性？
+ * 看源码可知，是定义在context容器中传过来的
+ */
 export default withRouter(App);
