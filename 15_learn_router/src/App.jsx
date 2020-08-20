@@ -8,18 +8,18 @@ import './App.css'
 // import className from 'classnames'
 
 class App extends PureComponent {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      links: [
-        {to: "/", title: "首页"},
-        {to: "/about", title: "关于"},
-        {to: "/profile", title: "我的"}
-      ],
-      currentIndex: 0
-    }
-  }
+  // constructor(props) {
+  //   super(props);
+  //
+  //   // this.state = {
+  //   //   links: [
+  //   //     {to: "/", title: "首页"},
+  //   //     {to: "/about", title: "关于"},
+  //   //     {to: "/profile", title: "我的"}
+  //   //   ],
+  //   //   currentIndex: 0
+  //   // }
+  // }
   render() {
     const id = 'abc';
     const info = {name: "Bill", age: 18, height: 1.88};
