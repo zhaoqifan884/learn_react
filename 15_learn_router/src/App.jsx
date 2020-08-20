@@ -1,15 +1,9 @@
 import React, {PureComponent} from 'react';
-import {NavLink, Route, Switch, withRouter} from "react-router-dom";
-import Home from "./pages/home";
-import About from "./pages/about";
-import Profile from "./pages/profile";
+import {NavLink, withRouter} from "react-router-dom";
+import {renderRoutes} from "react-router-config";
+import routes from "./router";
 
 import './App.css'
-import User from "./pages/user";
-import NoMatch from "./pages/noMatch";
-import Login from "./pages/login";
-import Product from "./pages/product";
-import Detail from "./pages/detail";
 
 // import className from 'classnames'
 
@@ -28,6 +22,7 @@ class App extends PureComponent {
   }
   render() {
     const id = 'abc';
+    const info = {name: "Bill", age: 18, height: 1.88};
     return (
       <div>
 
@@ -54,22 +49,36 @@ class App extends PureComponent {
           <NavLink to={'/about'} activeClassName={'link-active'}>关于</NavLink>
           <NavLink to={'/profile'} activeClassName={'link-active'}>我的</NavLink>
           <NavLink to={'/user'} activeClassName={'link-active'}>用户</NavLink>
+        {/*//动态id*/}
           <NavLink to={`/detail/${id}`} activeClassName={'link-active'}>详情</NavLink>
+        {/*//query的方式*/}
+          <NavLink to={`/detail2?name=Bill&age=18`} activeClassName={'link-active'}>详情2</NavLink>
+          {/*state方式： 传递复杂的数据*/}
+          <NavLink to={{
+            pathname: '/detail3',
+            search: '?name=abc',
+            state: info
+          }}
+                   activeClassName={'link-active'}>详情3</NavLink>
           <button onClick={event => this.jumpToProduct()}>商品</button>
 
           {/*//exact: 精准的匹配*/}
           {/*switch 组件 排他的作用，每个组件只能匹配一次*/}
-          <Switch>
-            <Route exact path={'/'} component={Home}/>
-            <Route path={'/about'} component={About}/>
-            <Route exact path={'/profile'} component={Profile}/>
-            {/*<Route path={'/:id'} component={User}/>*/}
-            <Route path={'/user'} component={User}/>
-            <Route path={'/login'} component={Login}/>
-            <Route path={'/product'} component={Product}/>
-            <Route path={'/detail/:id'} component={Detail}/>
-            <Route component={NoMatch}/>
-          </Switch>
+          {/*<Switch>*/}
+          {/*  <Route exact path={'/'} component={Home}/>*/}
+          {/*  <Route path={'/about'} component={About}/>*/}
+          {/*  <Route exact path={'/profile'} component={Profile}/>*/}
+          {/*  /!*<Route path={'/:id'} component={User}/>*!/*/}
+          {/*  <Route path={'/user'} component={User}/>*/}
+          {/*  <Route path={'/login'} component={Login}/>*/}
+          {/*  <Route path={'/product'} component={Product}/>*/}
+          {/*  <Route path={'/detail/:id'} component={Detail}/>*/}
+          {/*  <Route path={'/detail2'} component={Detail2}/>*/}
+          {/*  <Route path={'/detail3'} component={Detail3}/>*/}
+          {/*  <Route component={NoMatch}/>*/}
+          {/*</Switch>*/}
+        {/*renderRoutes 和 Switch 作用一样，但是需要创建路由文件，由renderRoutes内部帮我们跳转*/}
+        {renderRoutes(routes)}
 
       </div>
     );
