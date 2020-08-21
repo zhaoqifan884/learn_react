@@ -5,9 +5,10 @@ import {
 } from './store/actionCreators.js';
 
 // 1.基本做法
-// console.log("dispatch前---dispatching action:", addAction(10));
-// store.dispatch(addAction(10));
-// console.log("dispatch后---new state:", store.getState());
+console.log("dispatch前---dispatching action:", addAction(10));
+store.dispatch(addAction(10));
+//store.getState(): 获取当前的state
+console.log("dispatch后---new state:", store.getState());
 
 
 // console.log("dispatch前---dispatching action:", addAction(15));

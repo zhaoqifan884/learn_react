@@ -11,8 +11,8 @@ const defaultState = {
 
 /**
  *
- * @param state : 前一次返回的值
- * @param action ： 默认值
+ * @param state : 前一次计算返回的值
+ * @param action ： 本次修改的值
  * @returns {{counter: *}|{counter: number}}
  */
 function reducer(state = defaultState, action) {
